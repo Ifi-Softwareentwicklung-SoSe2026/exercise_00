@@ -26,30 +26,38 @@ tags: [ Sommersemester2026, Softwareentwicklung, Übung00]
 
 # Softwareentwicklung SoSe2026 - Aufgabe 00
 
-In dieser Übung sollen Sie sich die verschiedenen Möglichkeiten der Erstellung von C# Programmen erarbeiten und diese evaluieren. Dabei sollen Sie verschiedene Editorkonzepte ausprobieren und im Hinblick auf Ihre Anforderungen testen. Verwenden Sie die von Ihnen ausgewählte Toolchain zum Lösen der gestellten Aufgaben.
+Sie sollen:
 
-## Bearbeitungszeit
+- den Umgang mit c#, Compiler und Infrastruktur Software kennenlernen und üben
+- Erste Schritte mit Visual Studio Code
+- Erste Schritte mit Github und Github Classrooms
 
-29. April - 3. Mai 2024
+## Bearbeitungszeitraum
 
+20. April - 26. April 2026
 
-## 1. Wahl der Werkzeuge
+## 1. Visual Studio Code als leichtgewichtige IDE
 
-Nehmen wir an, Sie sind der Technologie-Scout in einem Unternehmen. Nachdem Microsoft seine Strategie bezüglich der Lizenzen von .NET geändert hat, wollen Sie sich einen Überblick verschaffen und testen, welche Tool-Chain für die Anforderungen in Ihrem Unternehmen am geeignetsten ist.
+- Installation von VS Code mit c# Extension (TODO: Installationsanleitung)
+- Projekt "Hello World" anlegen
+- Code schreiben
+- Compilieren und Ausführen in integrierter Console und in der IDE
+- Debug Modus ausprobieren
 
-Um Ihnen eine Richtschnur zu geben, haben wir etwas vorgearbeitet:
+neue Ideen:
+--------------------
 
-| Konzept                             | Beispiele                                      | Tutorials                                                                                                                                                                                  |
-| ----------------------------------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Texteditor und Commandozeile        | Notepad++ und .NET                       | [Link](https://www.youtube.com/@dotnet) |
-| Leichtgewichtige integrierte Lösung | Microsoft Visual Studio Code, Atom, Sublime Text, ... | C# mit Visual Studio Code [Link](https://www.youtube.com/watch?v=uytNCXw9dME)                                                                                             |
-| Schwergewichtige IDE                | Microsoft Visual Studio 2022, Eclipse, ...            |  Visual Studio Community Edition [Link](https://visualstudio.microsoft.com/de/vs/community/), [https://www.youtube.com/@visualstudio](https://www.youtube.com/@visualstudio)             |
+- Datentypen mit:
 
-> Kurze Installationsanleitungen zu Visual Studio Code inkl. C#-Extension finden auch im OPAL im Verzeichnis Toolchains.
+    - Basics: Data types, I/O, formatStrings
+    - Inspections und Decorators
+    - Memory Explorer
+    - implizite und explizite Casts
+    - Speichermodelle von Variablen, (gibts hier auch so Performancefallen wie bei Java Strings?)
+    - Fehlerhandling
 
-**Obige Auflistung stellt kein Muss dar. Fühlen Sie sich frei eigene Editoren, Compiler und Ausführungsumgebungen zu verwenden!**
-
-Testen Sie mindestens zwei Konzepte. Legen Sie dazu mit den gewählten Tools `Hello-World` Projekte an.
+vvv -- ab hier alter Kram vvv
+-----------------------------
 
 ## 2. Datentypen, Ein- und Ausgabe, formatierte Ausgabe
 
