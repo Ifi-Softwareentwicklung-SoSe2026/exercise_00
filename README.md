@@ -12,12 +12,11 @@ date: 2026-04-09
 icon: img/TUBAF_Logo_blau.svg
 logo: 
 
-attribute: title image Von Bundesarchiv, Bild 183-41030-0002 / Draum / CC-BY-SA 3.0, CC BY-SA 3.0 de, https://commons.wikimedia.org/w/index.php?curid=5428443
+attribute: 
 
+attribute: 
 
-attribute: Sicherheitszeichen von [Berufsgenossenschaft Holz und Metall](https://www.bghm.de/arbeitsschuetzer/praxishilfen/sicherheitszeichen)
-
-comment:  Arbeitssicherheit & Gesundheitsschutz
+comment:  Übung Softwareentwicklung 00
 
 link:   https://raw.githubusercontent.com/vgoehler/LiaScript_CSS_Provider/refs/heads/main/dist/university.css
 
