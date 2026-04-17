@@ -24,128 +24,156 @@ tags: [ Sommersemester2026, Softwareentwicklung, Übung00]
 
 -->
 
-# Softwareentwicklung SoSe2026 - Aufgabe 00
+#  Aufgabe 00
+
+Softwareentwicklung SoSe2026
+============================
 
 Sie sollen:
 
 - den Umgang mit c#, Compiler und Infrastruktur Software kennenlernen und üben
-- Erste Schritte mit Visual Studio Code
+- Erste Schritte mit Visual Studio Code und C#
 - Erste Schritte mit Github und Github Classrooms
 
-## Bearbeitungszeitraum
+Bearbeitungszeitraum
+====================
 
-20. April - 26. April 2026
+*20. April - 26. April 2026*
 
-## 1. Visual Studio Code als leichtgewichtige IDE
+**Einleitung für die Aufgaben:**
+============================
 
-- Installation von VS Code mit c# Extension (TODO: Installationsanleitung)
-- Projekt "Hello World" anlegen
-- Code schreiben
-- Compilieren und Ausführen in integrierter Console und in der IDE
-- Debug Modus ausprobieren
+Willkommen an Bord deines interstellaren Raumschiffs! Deine Mission: die Erforschung und Katalogisierung von Himmelskörpern in einem bisher unerforschten Sternensystem. Als Teil der Crew bist du verantwortlich für die Entwicklung eines Programms, das die gesammelten astronomischen Daten strukturiert erfasst, validiert und ausgibt. Jeder Himmelskörper, egal ob Stern, Planet oder Mond, birgt wertvolle Informationen, die für den Erfolg der Mission entscheidend sind. Nutze dein Wissen über Datentypen, Eingabevalidierung und Fehlerbehandlung, um sicherzustellen, dass die Daten präzise und zuverlässig verarbeitet werden. Die Bodenstation verlässt sich auf deine Arbeit, also sei sorgfältig und kreativ bei der Umsetzung!
 
-neue Ideen:
---------------------
+![Artemis I Launch (NHQ202211160017), Joel Kowsky, Public domain, via Wikimedia Commons](https://upload.wikimedia.org/wikipedia/commons/b/b9/Artemis_I_Launch_%28NHQ202211160017%29.jpg)
 
-- Datentypen mit:
+## **Aufgabe 1: Mission Vorbereitung – Entwicklungsumgebung einrichten**
 
-    - Basics: Data types, I/O, formatStrings
-    - Inspections und Decorators
-    - Memory Explorer
-    - implizite und explizite Casts
-    - Speichermodelle von Variablen, (gibts hier auch so Performancefallen wie bei Java Strings?)
-    - Fehlerhandling
+**Zeitaufwand: 30 Minuten**
 
-vvv -- ab hier alter Kram vvv
------------------------------
+*Die erste Phase deiner Mission: Richte deine Entwicklungsumgebung ein, um für die Herausforderungen des Weltraums gewappnet zu sein.*
 
-## 2. Datentypen, Ein- und Ausgabe, formatierte Ausgabe
+- Installiere **Visual Studio Code** mit der **C#-Dev-Erweiterung**.
+- Installiere die **.NET SDKs** für die Entwicklung von C#-Anwendungen.
+- Erstelle ein **"Hello World"**-Projekt `ConsoleApp`, um die Systeme zu testen.
+- Schreibe, kompiliere und führe den Code in der integrierten Konsole und IDE aus.
+- Probiere den **Debug-Modus** aus, um potenzielle Fehler in deiner Raumschiff-Software zu identifizieren.
 
-Zum auf einem fernen Planeten lebenden Energie-Wesen sollen folgende Daten ein und ausgegeben werden:
 
-+ Bezeichnung (Zeichenkette)
-+ Registriernummer (eine 5-stellige ganze Zahl),
-+ Kategorie (Buchstabe A, B oder C),
-+ Leuchtkraft (reelle Zahl mit 2 Nachkommastellen)
+<!-- class="lia-callout--note" -->
+> **Hinweis:**
+> Auf den Poolrechner der TU Bergakademie Freiberg ist Visual Studio Code bereits installiert und konfiguriert.
+> Überprüfe die Settings, um sicherzustellen, dass die C#-Erweiterung aktiviert ist und die .NET SDKs korrekt erkannt werden.
 
-Entwickeln Sie Ihr Programm schrittweise:
-
-1. Initialisieren Sie die Variablen mit geeigneten Konstanten ...
-2. Lesen Sie die Werte von der Kommandozeile ein ...
-3. Geben Sie die Werte von Tastatur ein ...
-... und geben Sie diese anschließend aus.
-
-Verwenden Sie die Datentypen `string`, `int`, `char` und `double`, für die Ausgabe die Methode `Console.WriteLine()` und für die Eingabe die Methode `Console.ReadLine()`. Bei der Ausgabe ist, falls nötig, die `ToString`-Methode zu verwenden, z.B. im Falle einer Gleitkommazahl:
-`value = zahl.ToString(CultureInfo.InvariantCulture);`
-
-Die Methode `Console.ReadLine()` liefert eine Zeichenkette, die in einen entsprechenden Datentyp umgewandelt werden muss. Dazu stehen z.B. für double folgende Methoden zur Verfügung:
+**Coding Help -- Main Function**<!-- class="head" -->
 
 ```csharp
-double wert = Convert.ToDouble(string, culture_specification);
-double wert = double.Parse(string, culture_specification);
-bool bwert = double.TryParse(string, styles, culture_specification, out wert);
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Mission startet...");
+    }
+}
 ```
 
-Verwenden Sie als `culture_specification` `CultureInfo.InvariantCulture`
-und `NumberStyles.AllowDecimalPoint` oder `NumberStyles.Any` als `style`.
 
-> Erfahrenere Programmierer können für die Kategorie gern `enum`-Typ verwenden und bei der Konvertierung mit `Convert` und `Parse` die Ausnahmen(Exception) behandeln!
+## **Aufgabe 2: Katalogisierung von Himmelskörpern für die interstellare Mission**
 
-## 3. Fehler
+**Zeitaufwand: 150 Minuten**<!-- class="subhead" -->
 
-Im Repository finden Sie die Datei `Temperatur.cs` , die ein fehlerhaftes Programm zur Umrechnung der Temperatur von Grad Celsius in Fahrenheit unter Verwendung der Formel:
+*Dein Raumschiff hat verschiedene Himmelskörper in einem unbekannten Sternensystem entdeckt. Entwickle ein Programm, um deren astronomische Daten zu erfassen, zu validieren und auszugeben.*
 
-$5 \cdot (T_{Fahrenheit} - 32) = 9 \cdot T_{Celsius}$
+**Unteraufgaben:**
 
-beinhaltet. Korrigieren Sie das Programm und führen Sie es aus.
+1. **Dateninitialisierung**
+2. **Daten von der Kommandozeile einlesen**
+3. **Interaktive Dateneingabe**
+4. **Datenausgabe**
+5. **Datenvalidierung**
+
+### 1. **Dateninitialisierung**
+
+   - Initialisiere Variablen mit passenden Konstanten für:
+
+     - **Name des Himmelskörpers** (Zeichenkette, z. B. "Proxima Centauri b" oder "Mond Phobos")
+     - **Katalog-Nummer** (5-stellige ganze Zahl, z. B. 12345)
+     - **Typ** (Enum: Stern, Planet, Mond)
+     - **Spektralklasse** (Buchstabe O, B, A, F, G, K, M; nur relevant für Sterne)
+     - **Scheinbare Helligkeit** (Gleitkommazahl mit 2 Nachkommastellen, z. B. 11.13; nur relevant für Sterne)
+     - **Umlaufzeit** (Gleitkommazahl in Erdjahren, z. B. 0.618 für Planeten/Monde)
+     - **Zentralkörper-Katalog-Nummer** (5-stellige ganze Zahl, z. B. 67890 für den Stern/Planeten, um den der Himmelskörper kreist)
+
+<!-- class="lia-callout--note" -->
+> **Hinweis:**
+> Nutzen Sie eine Datenklasse zur Kapselung der Variablen, z. B.: `Himmelskoerper`.
+> Die Main function soll in einer anderen Klasse enthalten sein, um die Daten zu initialisieren und zu verarbeiten.
+> Ein `?` hinter dem Datentyp bedeutet, dass die Variable null sein kann, z. B. `char?` für die Spektralklasse, da sie nur für Sterne relevant ist.
+
+### 2. **Daten von der Kommandozeile einlesen**
+
+   - Lies die Werte von der Kommandozeile ein und speichere sie in den Variablen.
+   - Dies soll in einer dedizierten Methode erfolgen, z. B. `LeseDatenEin()`.
+   - Nutze `args[]` in der `Main`-Methode, um die Eingaben zu verarbeiten. Übergib die Variablen mit einer festen Reihenfolge, z. B.:
+
+     - `dotnet datei.cs "Proxima Centauri b" 12345 Stern M 11.13 0.618 67890`
+
+   - nutze casts um Strings in die entsprechenden Datentypen umzuwandeln, z. B. `int.Parse(args[1])` für die Katalog-Nummer.
+
+### 3. **Interaktive Dateneingabe**
+
+   - Erweitere das Programm, sodass die Werte über die Tastatur eingegeben werden können.
+   - Nutze `Console.ReadLine()` und `Console.WriteLine()` für die Interaktion mit dem Benutzer.
+   - Nutze die Funktion `LeseDatenEin()` auch für die interaktive Eingabe, um Code-Duplikation zu vermeiden.
+
+4. **Datenausgabe**
+
+   - Gib die eingegebenen Daten formatiert aus, z. B.:
+
+     - Für Sterne: *"Himmelskörper: Proxima Centauri, Katalog-Nummer: 12345, Typ: Stern, Spektralklasse: M, Scheinbare Helligkeit: 11.13"*
+     - Für Planeten/Monde: *"Himmelskörper: Mars, Katalog-Nummer: 23456, Typ: Planet, Umlaufzeit: 1.88 Erdjahre, Zentralkörper-Katalog-Nummer: 10001"*
+
+5. **Datenvalidierung**
+
+   - Stelle sicher, dass die Eingaben den astronomischen Anforderungen entsprechen:
+
+     - Katalog-Nummer muss 5-stellig sein.
+     - Typ muss Stern, Planet oder Mond sein.
+     - Spektralklasse muss einer der gültigen Klassen (O, B, A, F, G, K, M) entsprechen (nur für Sterne).
+     - Scheinbare Helligkeit muss eine positive Gleitkommazahl sein (nur für Sterne).
+     - Umlaufzeit muss eine positive Gleitkommazahl sein (nur für Planeten/Monde).
+     - Zentralkörper-Katalog-Nummer muss 5-stellig sein (nur für Planeten/Monde).
 
 
-## 4. Ausdrücke
+## 2. Bonus
 
-**a) Arithmetische Operatoren**
+### 1. Fehlerbehandlung
 
-
-Definieren und initialisieren Sie folgende Variablen:
+- nutze `try-catch` Blöcke, um ungültige Eingaben abzufangen und benutzerfreundliche Fehlermeldungen auszugeben.
+- Mit throw kannst du eigene Fehler auslösen, z. B. wenn die Katalog-Nummer nicht 5-stellig ist oder der Typ ungültig ist.
+- mit `finally` kannst du sicherstellen, dass bestimmte Aktionen immer ausgeführt werden, z. B. das Schließen von Ressourcen oder das Bereinigen von Daten.
 
 ```csharp
-int a = 1, b = 2, c = 3, r = 4;
-double y = 4.0;
+try
+{
+    // Code, der potenziell eine Ausnahme auslösen könnte
+}
+catch (FormatException ex)
+{
+    Console.WriteLine("Ungültiges Format: " + ex.Message);
+}
+catch (ArgumentException ex)
+{
+    Console.WriteLine("Ungültiges Argument: " + ex.Message);
+}
+catch (Exception ex)
+{
+    Console.WriteLine("Ein unerwarteter Fehler ist aufgetreten: " + ex.Message);
+}
+finally
+{
+    // Code, der immer ausgeführt wird, z. B. Ressourcen freigeben
+}
 ```
-
-Definieren Sie des Weiteren noch fehlende Variablen, berechnen Sie die Ausdrücke und geben Sie die Ergebnisse aus.
-
-$d=\frac{a}{b}$
-
-$f=\frac{a+b}{c-y}-\frac{a}{b}$
-
-$f=\frac{-b+\sqrt{b^2-4ac}}{2a}$
-
-$A = \pi r^2$
-
-**b) Boolsche und Vergleichsoperatoren**
-
-Überprüfen Sie in einem Programm
-
-+ ob der eingegebene Wert für x im Bereich x1...x2 liegt,
-+ ob der durch x und y definierte Punkt in einem Rechteck mit den Eckpunkten x1, y1 und x2, y2 liegt,
-+ ob zwei Punkte die gleichen Koordinaten haben,
-+ ob mindestens eine der Bedingungen x1<=x<=x2 bzw. y1<=y<=y2 zutrifft.
-
-Lesen Sie die Werte x1, y1, x2, y2, x und y ein. Formulieren Sie die logischen Ausdrücke, die auf die
-Variable vom Typ `bool` zugewiesen werden, geben Sie den Wert der Variable aus.
-
-**c) Bit- und Shift-Operatoren**
-Variablen x und y sind wie folgt definiert:
-
-```
-int x = 0b0001_0001, y=0b1000_1000, z=0b1111;
-```
-
-Berechnen Sie folgende Ausdrücke und geben Sie die Ergebnisse als Hexadezimalzahlen aus. Überlegen Sie wie diese Ergebnisse zustande kommen:
-
-+ `x & y & z`,
-+ `(x | y) & z`,
-+ `~(x ^ y)` und
-+ `~(x ^ y) & byte.MaxValue`
-
-Mit welchem Operator kann aus dem Wert x der Wert y berechnet werden? Überprüfen Sie Ihre Vermutung.
