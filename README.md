@@ -114,37 +114,37 @@ class Program
 
 ### 2. **Daten von der Kommandozeile einlesen**
 
-   - Lies die Werte von der Kommandozeile ein und speichere sie in den Variablen.
-   - Dies soll in einer dedizierten Methode erfolgen, z. B. `LeseDatenEin()`.
-   - Nutze `args[]` in der `Main`-Methode, um die Eingaben zu verarbeiten. Übergib die Variablen mit einer festen Reihenfolge, z. B.:
+- Lies die Werte von der Kommandozeile ein und speichere sie in den Variablen.
+- Dies soll in einer dedizierten Methode erfolgen, z. B. `LeseDatenEin()`.
+- Nutze `args[]` in der `Main`-Methode, um die Eingaben zu verarbeiten. Übergib die Variablen mit einer festen Reihenfolge, z. B.:
 
-     - `dotnet datei.cs "Proxima Centauri b" 12345 Stern M 11.13 0.618 67890`
+   - `dotnet datei.cs "Proxima Centauri b" 12345 Stern M 11.13 0.618 67890`
 
-   - nutze casts um Strings in die entsprechenden Datentypen umzuwandeln, z. B. `int.Parse(args[1])` für die Katalog-Nummer.
+- nutze casts um Strings in die entsprechenden Datentypen umzuwandeln, z. B. `int.Parse(args[1])` für die Katalog-Nummer.
 
 ### 3. **Interaktive Dateneingabe**
 
-  - Erweitere das Programm, sodass die Werte über die Tastatur eingegeben werden können.
-  - Nutze `Console.ReadLine()` und `Console.WriteLine()` für die Interaktion mit dem Benutzer.
-  - Nutze die Funktion `LeseDatenEin()` auch für die interaktive Eingabe, um Code-Duplikation zu vermeiden.
+- Erweitere das Programm, sodass die Werte über die Tastatur eingegeben werden können.
+- Nutze `Console.ReadLine()` und `Console.WriteLine()` für die Interaktion mit dem Benutzer.
+- Nutze die Funktion `LeseDatenEin()` auch für die interaktive Eingabe, um Code-Duplikation zu vermeiden.
 
 ### 4. **Datenausgabe**
 
-   - Gib die eingegebenen Daten formatiert aus, z. B.:
+- Gib die eingegebenen Daten formatiert aus, z. B.:
 
-     - Für Sterne: *"Himmelskörper: Proxima Centauri, Katalog-Nummer: 12345, Typ: Stern, Spektralklasse: M, Scheinbare Helligkeit: 11.13"*
-     - Für Planeten/Monde: *"Himmelskörper: Mars, Katalog-Nummer: 23456, Typ: Planet, Umlaufzeit: 1.88 Erdjahre, Zentralkörper-Katalog-Nummer: 10001"*
+   - Für Sterne: *"Himmelskörper: Proxima Centauri, Katalog-Nummer: 12345, Typ: Stern, Spektralklasse: M, Scheinbare Helligkeit: 11.13"*
+   - Für Planeten/Monde: *"Himmelskörper: Mars, Katalog-Nummer: 23456, Typ: Planet, Umlaufzeit: 1.88 Erdjahre, Zentralkörper-Katalog-Nummer: 10001"*
 
 ### 5. **Datenvalidierung**
 
-   - Stelle sicher, dass die Eingaben den astronomischen Anforderungen entsprechen:
+- Stelle sicher, dass die Eingaben den astronomischen Anforderungen entsprechen:
 
-     - Katalog-Nummer muss 5-stellig sein.
-     - Typ muss Stern, Planet oder Mond sein.
-     - Spektralklasse muss einer der gültigen Klassen (O, B, A, F, G, K, M) entsprechen (nur für Sterne).
-     - Scheinbare Helligkeit muss eine positive Gleitkommazahl sein (nur für Sterne).
-     - Umlaufzeit muss eine positive Gleitkommazahl sein (nur für Planeten/Monde).
-     - Zentralkörper-Katalog-Nummer muss 5-stellig sein (nur für Planeten/Monde).
+   - Katalog-Nummer muss 5-stellig sein.
+   - Typ muss Stern, Planet oder Mond sein.
+   - Spektralklasse muss einer der gültigen Klassen (O, B, A, F, G, K, M) entsprechen (nur für Sterne).
+   - Scheinbare Helligkeit muss eine positive Gleitkommazahl sein (nur für Sterne).
+   - Umlaufzeit muss eine positive Gleitkommazahl sein (nur für Planeten/Monde).
+   - Zentralkörper-Katalog-Nummer muss 5-stellig sein (nur für Planeten/Monde).
 
 
 ## Bonusaufgaben
