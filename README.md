@@ -98,13 +98,13 @@ class Program
 
    - Initialisiere Variablen mit passenden Konstanten für:
 
-     - **Name des Himmelskörpers** (Zeichenkette, z. B. "Proxima Centauri b" oder "Mond Phobos")
-     - **Katalog-Nummer** (5-stellige ganze Zahl, z. B. 12345)
-     - **Typ** (Enum: Stern, Planet, Mond)
-     - **Spektralklasse** (Buchstabe O, B, A, F, G, K, M; nur relevant für Sterne)
-     - **Scheinbare Helligkeit** (Gleitkommazahl mit 2 Nachkommastellen, z. B. 11.13; nur relevant für Sterne)
-     - **Umlaufzeit** (Gleitkommazahl in Erdjahren, z. B. 0.618 für Planeten/Monde)
-     - **Zentralkörper-Katalog-Nummer** (5-stellige ganze Zahl, z. B. 67890 für den Stern/Planeten, um den der Himmelskörper kreist)
+    - **Name des Himmelskörpers** (Zeichenkette, z. B. "Proxima Centauri b" oder "Mond Phobos")
+    - **Katalog-Nummer** (5-stellige ganze Zahl, z. B. 12345)
+    - **Typ** (Enum: Stern, Planet, Mond)
+    - **Spektralklasse** (Buchstabe O, B, A, F, G, K, M; nur relevant für Sterne)
+    - **Scheinbare Helligkeit** (Gleitkommazahl mit 2 Nachkommastellen, z. B. 11.13; nur relevant für Sterne)
+    - **Umlaufzeit** (Gleitkommazahl in Erdjahren, z. B. 0.618 für Planeten/Monde)
+    - **Zentralkörper-Katalog-Nummer** (5-stellige ganze Zahl, z. B. 67890 für den Stern/Planeten, um den der Himmelskörper kreist)
 
 <!-- class="lia-callout--note" -->
 > **Hinweis:**
@@ -124,9 +124,9 @@ class Program
 
 ### 3. **Interaktive Dateneingabe**
 
-   - Erweitere das Programm, sodass die Werte über die Tastatur eingegeben werden können.
-   - Nutze `Console.ReadLine()` und `Console.WriteLine()` für die Interaktion mit dem Benutzer.
-   - Nutze die Funktion `LeseDatenEin()` auch für die interaktive Eingabe, um Code-Duplikation zu vermeiden.
+  - Erweitere das Programm, sodass die Werte über die Tastatur eingegeben werden können.
+  - Nutze `Console.ReadLine()` und `Console.WriteLine()` für die Interaktion mit dem Benutzer.
+  - Nutze die Funktion `LeseDatenEin()` auch für die interaktive Eingabe, um Code-Duplikation zu vermeiden.
 
 ### 4. **Datenausgabe**
 
