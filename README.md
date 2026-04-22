@@ -178,3 +178,29 @@ finally
     // Code, der immer ausgeführt wird, z. B. Ressourcen freigeben
 }
 ```
+
+### Properties
+
+- Verwende Properties, um den Zugriff auf die Felder der Datenklasse zu kontrollieren und Validierung einzubauen.
+
+```csharp
+class Himmelskoerper
+{
+    private string name;
+    private int katalogNummer;
+
+    public string Name
+    {
+        get { return name; }
+        set
+        {
+            if (string.IsNullOrWhiteSpace(value))
+                throw new ArgumentException("Name darf nicht leer sein.");
+            name = value;
+        }
+    }
+
+    // Weitere Properties für Typ, Spektralklasse, etc.
+}
+```
+
