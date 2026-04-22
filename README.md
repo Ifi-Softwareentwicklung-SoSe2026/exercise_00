@@ -128,14 +128,14 @@ class Program
    - Nutze `Console.ReadLine()` und `Console.WriteLine()` für die Interaktion mit dem Benutzer.
    - Nutze die Funktion `LeseDatenEin()` auch für die interaktive Eingabe, um Code-Duplikation zu vermeiden.
 
-4. **Datenausgabe**
+### 4. **Datenausgabe**
 
    - Gib die eingegebenen Daten formatiert aus, z. B.:
 
      - Für Sterne: *"Himmelskörper: Proxima Centauri, Katalog-Nummer: 12345, Typ: Stern, Spektralklasse: M, Scheinbare Helligkeit: 11.13"*
      - Für Planeten/Monde: *"Himmelskörper: Mars, Katalog-Nummer: 23456, Typ: Planet, Umlaufzeit: 1.88 Erdjahre, Zentralkörper-Katalog-Nummer: 10001"*
 
-5. **Datenvalidierung**
+### 5. **Datenvalidierung**
 
    - Stelle sicher, dass die Eingaben den astronomischen Anforderungen entsprechen:
 
@@ -147,9 +147,10 @@ class Program
      - Zentralkörper-Katalog-Nummer muss 5-stellig sein (nur für Planeten/Monde).
 
 
-## 2. Bonus
+## Bonusaufgaben
 
-### 1. Fehlerbehandlung
+Fehlerbehandlung
+=====================
 
 - nutze `try-catch` Blöcke, um ungültige Eingaben abzufangen und benutzerfreundliche Fehlermeldungen auszugeben.
 - Mit throw kannst du eigene Fehler auslösen, z. B. wenn die Katalog-Nummer nicht 5-stellig ist oder der Typ ungültig ist.
