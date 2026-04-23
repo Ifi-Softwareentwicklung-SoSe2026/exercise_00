@@ -22,7 +22,7 @@ tags: [ Sommersemester2026, Softwareentwicklung, Übung00]
 
 -->
 
-[![LiaScript Course](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/Ifi-Softwareentwicklung-SoSe2026/Bildersammlung/refs/heads/main/makros.md)
+[![LiaScript Course](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/Ifi-Softwareentwicklung-SoSe2026/exercise_00/refs/heads/main/README.md)
 
 #  Aufgabe 00
 
