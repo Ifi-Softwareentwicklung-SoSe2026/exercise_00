@@ -2,7 +2,7 @@
 
 author:   Volker Göhler
 email:    volker.goehler@informatik.tu-freiberg.de
-version:  0.0.1
+version:  0.0.2
 language: de
 narrator: Deutsch Female
 
@@ -14,8 +14,6 @@ logo:
 
 attribute: 
 
-attribute: 
-
 comment:  Übung Softwareentwicklung 00
 
 link:   https://raw.githubusercontent.com/vgoehler/LiaScript_CSS_Provider/refs/heads/main/dist/university.css
@@ -23,6 +21,8 @@ link:   https://raw.githubusercontent.com/vgoehler/LiaScript_CSS_Provider/refs/h
 tags: [ Sommersemester2026, Softwareentwicklung, Übung00]
 
 -->
+
+[![LiaScript Course](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/Ifi-Softwareentwicklung-SoSe2026/Bildersammlung/refs/heads/main/makros.md)
 
 #  Aufgabe 00
 
