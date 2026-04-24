@@ -2,7 +2,7 @@
 
 author:   Volker Göhler
 email:    volker.goehler@informatik.tu-freiberg.de
-version:  0.0.2
+version:  0.0.3
 language: de
 narrator: Deutsch Female
 
@@ -118,9 +118,10 @@ class Program
 - Dies soll in einer dedizierten Methode erfolgen, z. B. `LeseDatenEin()`.
 - Nutze `args[]` in der `Main`-Methode, um die Eingaben zu verarbeiten. Übergib die Variablen mit einer festen Reihenfolge, z. B.:
 
-   - `dotnet datei.cs "Proxima Centauri b" 12345 Stern M 11.13 0.618 67890`
+   - `dotnet -- "Proxima Centauri b" 12345 Stern M 11.13`
 
 - nutze casts um Strings in die entsprechenden Datentypen umzuwandeln, z. B. `int.Parse(args[1])` für die Katalog-Nummer.
+- beachte die unterschiedlichen Anforderungen für Sterne (Spektralklasse, scheinbare Helligkeit) und Planeten/Monde (Umlaufzeit, Zentralkörper-Katalog-Nummer).
 
 ### 3. **Interaktive Dateneingabe**
 
@@ -134,6 +135,28 @@ class Program
 
    - Für Sterne: *"Himmelskörper: Proxima Centauri, Katalog-Nummer: 12345, Typ: Stern, Spektralklasse: M, Scheinbare Helligkeit: 11.13"*
    - Für Planeten/Monde: *"Himmelskörper: Mars, Katalog-Nummer: 23456, Typ: Planet, Umlaufzeit: 1.88 Erdjahre, Zentralkörper-Katalog-Nummer: 10001"*
+
+- Beachte die unterschiedlichen Möglichkeiten der Ausgabe:
+
+    - String.Format 
+        
+        ```csharp 
+        string output = String.Format(
+            "Himmelskörper: {0}, Katalog-Nummer: {1:D}, Typ: {2:G}/{2:D}",
+            name,
+            katalogNummer,
+            typ
+        );
+        ```
+
+        - https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings
+        - https://learn.microsoft.com/en-us/dotnet/standard/base-types/enumeration-format-strings
+
+    - String Interpolation
+
+        ```csharp
+        string output = $"Himmelskörper: {name}, Katalog-Nummer: {katalogNummer:D}, Typ: {typ:G}/{typ:D}";
+        ```
 
 ### 5. **Datenvalidierung**
 
