@@ -38,7 +38,7 @@ Sie sollen:
 Bearbeitungszeitraum
 ====================
 
-*20. April - 26. April 2026*
+*20. April - 26. April 2026* (Rest am 27. April 2026)
 
 **Einleitung für die Aufgaben:**
 ============================
